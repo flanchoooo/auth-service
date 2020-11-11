@@ -11,7 +11,6 @@ import com.hotelMS.repository.RoleRepository;
 import com.hotelMS.repository.UserRepository;
 import com.hotelMS.utils.Constants;
 import com.hotelMS.service.UserService;
-import io.swagger.models.Model;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +21,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import springfox.documentation.swagger2.mappers.ModelMapper;
+
 
 import javax.annotation.Resource;
 import javax.validation.ConstraintViolationException;

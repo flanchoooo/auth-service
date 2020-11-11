@@ -13,6 +13,14 @@ public class Platform extends Auditable<String> {
     private String version;
     private String logoUrl;
     private String port;
+    private String email;
+    private String hotelAddress;
+    private String hotelPhoneNumber;
+    private String country;
+    private String city;
+    private String state;
+    private String zipCode;
+
 
     @Id
     @Column(name = "id", nullable = false)
@@ -83,5 +91,70 @@ public class Platform extends Auditable<String> {
 
     public void setPort(String port) {
         this.port = port;
+    }
+
+
+    @Basic
+    @Column(name = "hotel_address")
+    public String getHotelAddress() {
+        return hotelAddress;
+    }
+    public void setHotelAddress(String hotelAddress) {
+        this.hotelAddress = hotelAddress;
+    }
+
+    @Basic
+    @Column(name = "email")
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Basic
+    @Column(name = "hotel_phone_number")
+    public String getHotelPhoneNumber() {
+        return hotelPhoneNumber;
+    }
+    public void setHotelPhoneNumber(String hotelPhoneNumber) {
+        this.hotelPhoneNumber = hotelPhoneNumber;
+    }
+
+
+    @Basic
+    @Column(name = "country")
+    public String getCountry() {
+        return country;
+    }
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    @Basic
+    @Column(name = "city")
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    @Basic
+    @Column(name = "state")
+    public String getState() {
+        return state;
+    }
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    @Basic
+    @Column(name = "zip_code")
+    public String getZipCode() {
+        return zipCode;
+    }
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 }

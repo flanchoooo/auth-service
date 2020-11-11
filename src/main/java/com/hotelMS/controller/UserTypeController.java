@@ -21,7 +21,7 @@ import java.util.List;
 @RequestMapping(value = "/user_type")
 public class UserTypeController {
 
-    @Autowired
+   /* @Autowired
     UserTypeServiceImpl userTypeService;
 
     @Resource
@@ -42,5 +42,5 @@ public class UserTypeController {
         return userTypeRepository.findById(Integer.valueOf(id)).get();
     }
 
-
+*/
 }

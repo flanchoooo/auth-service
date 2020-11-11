@@ -58,4 +58,27 @@ public class CreateUserDto implements Serializable {
     @NotNull
     public String reference;
 
+    @NotNull
+    private String userType;
+
+    @NotNull
+    private String role;
+
+    @NotNull
+    private String uploadImage;
+
+    @NotNull
+    private String archiveUser;
+
+    @NotNull
+    private String city;
+
+    @NotNull
+    private String state;
+
+    @NotNull
+    private String zipCode;
+
+
+
 }

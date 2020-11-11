@@ -28,7 +28,13 @@ public class User extends AbstractAuditingEntity {
     public String nationality;
     public String phoneNumber;
     public String reference;
-    private Integer userType;
+    private String userType;
+    private String role;
+    private String uploadImage;
+    private String archiveUser;
+    private String city;
+    private String state;
+    private String zipCode;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -196,7 +202,7 @@ public class User extends AbstractAuditingEntity {
     }
 
     @Basic
-    @Column(name = "reference_id", nullable = true)
+    @Column(name = "reference_id", nullable = true, unique = true)
     public Integer getReferenceId() {
         return referenceId;
     }
@@ -248,6 +254,78 @@ public class User extends AbstractAuditingEntity {
 
     public void setCompanyId(Integer companyId) {
         this.companyId = companyId;
+    }
+
+    @Basic
+    @Column(name = "user_type", nullable = true, length = 128)
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
+
+    @Basic
+    @Column(name = "role", nullable = true, length = 128)
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+
+    @Basic
+    @Column(name = "upload_image", nullable = true, length = 128)
+    public String getUploadImage() {
+        return uploadImage;
+    }
+
+    public void setUploadImage(String uploadImage) {
+        this.uploadImage = uploadImage;
+    }
+
+    @Basic
+    @Column(name = "city", nullable = true, length = 128)
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    @Basic
+    @Column(name = "state", nullable = true, length = 128)
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+
+    @Basic
+    @Column(name = "zip_code", nullable = true, length = 128)
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    @Basic
+    @Column(name = "archive_user", nullable = true, length = 128)
+    public String getArchiveUser() {
+        return archiveUser;
+    }
+
+    public void setArchiveUser(String archiveUser) {
+        this.archiveUser = archiveUser;
     }
 
 
