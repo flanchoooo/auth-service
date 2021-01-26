@@ -74,7 +74,7 @@ public class Platform extends Auditable<String> {
     }
 
     @Basic
-    @Column(name = "logo_url", nullable = false, length = 128)
+    @Column(name = "logo_url", nullable = false)
     public String getLogoUrl() {
         return logoUrl;
     }
